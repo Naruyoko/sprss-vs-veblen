@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SPrSS &lt;-&gt; Veblen</title>
+  <script src="./script.js"></script>
+</head>
+<body>
+  <h1>SPrSS &lt;-&gt; Veblen</h1>
+  <form name=form>
+    <span id="inputlabel">SPrSS:</span><br>
+    <textarea id="input" style="width:calc(100% - 8px);height:calc(100% - 28px);text-align:left;white-space:nowrap;margin:0;border:1px solid black;resize:both;font-family:monospace;font-size:13.5px;padding:4px;" oninput="requestAnimationFrame(convertall)" contentEditable>0,3,5,2</textarea>
+    <input type="button" id="toggledirectionbutton" value="SPrSS->Veblen" onclick="toggledirection()">
+    <input type="button" value="Swap" onclick="swap()">
+    <input type="button" value="Convert" onclick="convertall()">
+  </form><br>
+  <span id="outputlabel">Veblen:</span><br>
+  <textarea id="output" style="width:calc(100% - 8px);height:calc(100% - 28px);text-align:left;white-space:pre;margin:0;border:1px solid black;resize:both;font-family:monospace;font-size:13.5px;padding:4px;" readonly></textarea>
+  <input type="button" value="Save" onclick="save(true)">
+  <input type="text" id="copyarea" style="display:none">
+  <p>
+    Converts SPrSS to corresponding expression in Veblen function and vise versa.<br>
+    Note that this correspondence is unproven.
+  </p>
+  <div>Version 1</div>
+</body>
+</html>
